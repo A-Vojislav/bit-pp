@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak4</title>
+</head>
+<body>
+    <form>
+        <label for="Pitanje">Pitanje 1. Sta je RAM</label>
+        <hr>
+            <input type="radio" name="Random" value="Random-acsess-memory"><label for="odgovor1">Random-access memory</label>
+            <input type="radio" name="Random2" value="random-alternating-memory"><label for="odgovor2">random-alternating memory</label>
+            <input type="radio" name="Random3" value="a-battering-ram" ><label for="odgovor3">a battering ram</label>
+        <hr>
+        <label for="Pitanje">Pitanje 1. Sta je potrebno za kuvanje kafe</label>
+        <hr>
+            <input type="checkbox" name="Random" value="voda"><label for="odgovor1">Voda</label>
+            <input type="checkbox" name="Random2" value="biber"><label for="odgovor2">biber</label>
+            <input type="checkbox" name="Random3" value="dzezva" ><label for="odgovor3">dzezva</label>
+            <input type="checkbox" name="Random4" value="ringla"><label for="odgovor4">ringla</label>
+            <input type="checkbox" name="Random5" value="samlevena zrna kafe"><label for="odgovor5">samlevena zrna kafe</label>
+            <input type="checkbox" name="Random6" value="kasicica" ><label for="odgovor6">kasicica</label>
+        <hr>
+        <label for="datumi">Datumi</label>
+            <p>Dan</p>
+            <select id="Dan" name="Dan">
+                <option>Date</option>
+                <option value="1998">1</option>
+                <option value="1999">2</option>
+                <option value="2000">3</option>
+                <option value="2001">4</option>
+                <option value="2002">5</option>
+                <option value="2003">6</option>
+                <option value="2004">7</option>
+                <option value="2005">8</option>
+                <option value="2006">9</option>
+                <option value="2007">10</option>
+                <option value="2008">11</option>
+                <option value="2009">12</option>
+                <option value="2010">13</option>
+                
+        </select>
+            <p>Mesec</p>
+            <select id="month" name="month">
+                <option value="1998">1</option>
+                <option value="1999">2</option>
+                <option value="2000">3</option>
+                <option value="2001">4</option>
+                <option value="2002">5</option>
+                <option value="2003">6</option>
+                <option value="2004">7</option>
+                <option value="2005">8</option>
+                <option value="2006">9</option>
+                <option value="2007">10</option>
+                <option value="2008">11</option>
+                <option value="2009">12</option>
+            </select>
+            <p>Godina</p>
+        <select id="year" name="year">
+                <option>year</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+        </select>
+
+        <hr>
+        <input type="reset" value="Reset">
+        <input type="image"  name="Submit" title="Submit" src="data:image/png;base64,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">
+    
+    </form>
+
+
+    <hr>
+
+</body>
+</html>
