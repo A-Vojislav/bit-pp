@@ -1,0 +1,32 @@
+.para1{
+    color: rgb(0, 206, 209);
+    opacity: 0,5;
+}
+
+.para2{
+    color:  #00ced1;
+    background-color: rgba(250, 235, 215, 0,5);
+  
+}
+.para3{
+    color:  #3e2083;
+    background-color: blue;
+}
+
+
+.jedan{
+    background-color: aliceblue;
+    text-align: center;
+}
+.dva{
+    background-color: hotpink;
+}
+.tri{
+    background-color: yellow;
+}
+.cetiri{
+    background-color: blue;
+}
+.pet{
+    background-color: green;
+}

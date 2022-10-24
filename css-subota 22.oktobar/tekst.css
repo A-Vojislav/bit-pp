@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+.para1{
+    font-size: larger;
+    color: green;
+   font-family: Fasthand;
+}
+.p1{
+    font-family: Fasthand;
+    font-size: large;
+}
+
+.para2{
+    font-family: Fuzzy+Bubbles;
+    font-size: 2em;
+}
+
+.para3{
+    font-family: Source+Serif+Pro;
+    font-size: 2em;
+}
+
