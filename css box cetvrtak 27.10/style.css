@@ -1,0 +1,72 @@
+.zuti{
+    background: yellow;
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    max-width: 300px;
+
+}
+
+.crveni{
+    background: red;
+    width: 600px;
+    height: 300px;
+    max-height: 200px;
+}
+.borderi{
+    background: yellow;
+    border: 5px thick black;
+ }
+.borders1{
+    border: 5px dashed red;
+    
+}
+.borders3{
+    border: 5px dashed red;
+
+}
+.borders2{
+    border: 5px solid green;
+}
+.pading{
+    background: yellowgreen;
+}
+.padinzi{
+    padding: 50px;
+}
+.padinzi2{
+    padding-top: 50px;
+}
+.padinzi3{
+    padding: 50px;
+}
+.margine{
+    background: rgb(219, 114, 114);
+    margin-right: 20px;
+    padding: 0px;
+    display: inline-flex;
+}
+.marginez{
+    width: 300px;
+    margin: 50px;
+}
+.marginez2{
+    width: 400px;
+    text-align: center;
+    display: none;
+}
+.marginez3{
+    width: 200px;
+    margin-left: 100px;
+    display: none;
+}
+h1{
+    width: 960px;
+    text-align: center;
+    align-items: center;
+    padding: 50px 0px;
+    margin: 50px 0px;
+    background: blue;
+    box-shadow: 5px 0px 0px 20px rgba(255, 40, 0, 0.5);
+    border-radius: 10px;
+}
