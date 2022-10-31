@@ -1,0 +1,89 @@
+.circles{
+    list-style-type: circle;
+}
+.square{
+    list-style-type: square;
+}
+.upperAlphabetics{
+    list-style-type: upper-alpha;
+}
+.romanNumber{
+    list-style-type: upper-roman;
+}
+.image{
+    list-style-image: url(/103077.png);
+   
+}
+.image2{
+    list-style-image: url(/103077.png);
+    
+    list-style-position: inside;
+}
+.tabela{
+    margin: auto;
+    border-spacing: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.prvi:hover{
+    background-color: orange;
+}
+.drugi:hover{
+    background-color: orange;
+}
+.treci:hover{
+    background-color: orange;
+}
+.cetvrti:hover{
+    background-color: orange;
+}
+.peti:hover{
+    background-color: orange;
+}
+
+.heading{
+    background-color: red;
+}
+img{
+    height: 100px;
+    
+}
+.prvi{
+    background-color: white;
+
+}
+.drugi, .cetvrti {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+.get{
+    color: orange;
+}
+.naslov{
+    font-size: 36px;
+    padding-left: 25px;
+    
+}
+.form{
+    background-color: rgba(128, 128, 128,0.2);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 200px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.formdata{
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 0px 2px 2px 2px rgba(128, 128, 128, 0.5);
+}
+
+.button{
+    height: 30px;
+    width: 200px;
+    background-color: rgb(187, 52, 52);
+    border: 0px solid rgb(187, 52, 52);
+    border-radius: 5px;
+    color: white;
+
+}
