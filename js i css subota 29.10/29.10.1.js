@@ -69,6 +69,10 @@ console.log(pozicija('smaxkasdcajkxc nqoawskjd', 'x'))
 function lastOccurrence(a, x){
     var result = '';
     if(a.includes(x)) {
+        
+        //KOMENTAR: zasto lastIndexOf(x) + 1 ? :) Zanima me taj +1, zbog cega? :) 
+        // Ovaj zadatak si mogao slicno kao i prosli: krenes ovoga puta od poslednjeg elementa u stringu, proveravas da li se poklapa sa zadatim. Obicna for petlja.
+        
         result = a.lastIndexOf(x) + 1
         } else {
         result = '-1';
@@ -103,6 +107,11 @@ function stringToArray (a) {
 // Note: A prime number (or a prime) is a natural number greater than 1 that has no positive
 // divisors other than 1 and itself.
 
+//KOMENTAR: Ovde nisi dobro napravio uslove. "Prime" brojevi su deljivi samo sa samim sobom i jedinicom.
+// Primer: 169. Ovo NIJE Prime broj, zato sto je deljiv sa 1, sa 169 i sa 13 :D A kod tebe u zadatku bi bio.
+// Kako onda uraditi? Ja bih isao sa For petljom, isao bih od broja 2 do broja N-1 (N je zadati broj). Zasto tako?
+// Zato sto ti nije bitno da li je deljiv sa 1 i sa samim sobom, to je definisano u zadatku. Bitno ti je da NIJE deljiv sa svim drugim brojevima izmedju.
+// Ako je deljiv - onda nije prime, lupis Break u For petlji. Ako nije deljiv - vrtis petlju i dalje. Ako ne bude ni sa jednim vise deljiv - Prime je :)
 function isPrime(number)
 { 
   if (number <= 1){
@@ -119,6 +128,9 @@ console.log(isPrime(83))
 
 // 9. Write a function that replaces spaces in a string with provided separator. If separator is not
 // provided, use “-” (dash) as the default separator.
+
+
+//KOMENTAR: Ovde u funkciji si mogao da imas ulazni parametar separator, sitna modifikacija ;)
 
 let separator;
 
@@ -156,6 +168,8 @@ console.log(zadatak10(deseti))
 // 11. Write a function that converts an array of strings into an array of numbers. Filter out all
 // non-numeric values.
 
+//KOMENTAR: Ovde si malo mutio, u sustini si dobio sto si hteo ali nisi uoblicio. Neka ti funkcija dobije oblik :)
+
 const arrstring = ['1',2,'o','d',3,4,5,'w']
 
 const arrbrojeva = [];
@@ -189,6 +203,10 @@ console.log(doPenzije('female',55));
 // the correct suffix such as 1st, 2nd, 3rd or 4th.
 // 1 -&gt; 1st
 // 11 -&gt; 11th
+
+//KOMENTAR: Sta ako je broj 11? :) Nisi pokrio brojeve vece od 3.
+// Ja bih ovo uradio na nacin da broj pretvorim u string, pa proveravam poslednji element stringa. Zasto poslednji?
+// Zato sto od poslednjeg zavisi da li je 11th ili 1st :) Ili je mozda 23rd.
 
 function humanizacijaBroja(number){
     if (number==1){
