@@ -66,21 +66,36 @@ console.log(pozicija('smaxkasdcajkxc nqoawskjd', 'x'))
 // result should be in human numeration form. If there are no occurrences of the character,
 // function should return -1.
 
-function lastOccurrence(a, x){
-    var result = '';
-    if(a.includes(x)) {
+// function lastOccurrence(a, x){
+//     var result = '';
+//     if(a.includes(x)) {
         
         //KOMENTAR: zasto lastIndexOf(x) + 1 ? :) Zanima me taj +1, zbog cega? :) 
         // Ovaj zadatak si mogao slicno kao i prosli: krenes ovoga puta od poslednjeg elementa u stringu, proveravas da li se poklapa sa zadatim. Obicna for petlja.
-        
-        result = a.lastIndexOf(x) + 1
-        } else {
-        result = '-1';
+        //ne znam dobro da koristim petlje pa sam ih izbegavao, u vezbama od juce sam se trudio maksimalno da koristim kako bi savladao. A sto plus 1, mislim da je samo ostalo od nekog pokusaja, 
+        //ili toga sto sam prebacio kao da je index od array-a, pa kao pri humanizaciji da ne pokazuje broj index-a, nego nama razumniji broj, tj da brojanje pocne od 1, a ne od nula.nisam sasvim siguran.         
+        //sad cu comment out ovaj pa ispocetka.
+//         result = a.lastIndexOf(x) + 1
+//         } else {
+//         result = '-1';
+//         }
+// return result
+//     }
+// console.log(lastOccurrence('smaxkasdcajkxc nqoawskjd', 's'))
+    function lastOccurrence(array,x){
+        let result;
+        for (let i=array.length; i>=0;i--){
+            if(x == array[i]) {
+                result=i;
+                break;
+            } else {
+                result='-1';
+            }
+        }   
+        return result
         }
-return result
-    }
-console.log(lastOccurrence('smaxkasdcajkxc nqoawskjd', 's'))
-
+    
+        console.log(lastOccurrence('smaxkasdcajkxc nqoawskjd', 's'))
 
 // 7. Write a function to convert string into an array. Space in a string should be represented as
 // “null” in new array.
@@ -112,19 +127,36 @@ function stringToArray (a) {
 // Kako onda uraditi? Ja bih isao sa For petljom, isao bih od broja 2 do broja N-1 (N je zadati broj). Zasto tako?
 // Zato sto ti nije bitno da li je deljiv sa 1 i sa samim sobom, to je definisano u zadatku. Bitno ti je da NIJE deljiv sa svim drugim brojevima izmedju.
 // Ako je deljiv - onda nije prime, lupis Break u For petlji. Ako nije deljiv - vrtis petlju i dalje. Ako ne bude ni sa jednim vise deljiv - Prime je :)
-function isPrime(number)
-{ 
-  if (number <= 1){
-  return false;
-  } else if (number <= 3){
-  return true;
-  } else if (number%2 == 0 || number%3 == 0){
-  return false;
-}
+//Hvala puno! prepravljam odmah, isti slucaj kao i gore, bezao sam od lupova jer nisam znao lepo da ih koristim. pa evo vracam se na uvezbavanje.
+//ipak i uz tvoju pomoc trebalo mi je vremena da resim, ali uspeo sam bez guglanja i bas sam se obradovao!
+// function isPrime(number)
+// { 
+//   if (number <= 1){
+//   return false;
+//   } else if (number <= 3){
+//   return true;
+//   } else if (number%2 == 0 || number%3 == 0){
+//   return false;
+// }
 
-  return true;
+//   return true;
+// }
+// console.log(isPrime(83))
+function isPrime(number){
+    let result;
+    for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            result = false;
+            break;
+        }
+              else {
+            result=true;
+        }
+        
+    }
+    return result
 }
-console.log(isPrime(83))
+console.log(isPrime(169))
 
 // 9. Write a function that replaces spaces in a string with provided separator. If separator is not
 // provided, use “-” (dash) as the default separator.
@@ -132,9 +164,8 @@ console.log(isPrime(83))
 
 //KOMENTAR: Ovde u funkciji si mogao da imas ulazni parametar separator, sitna modifikacija ;)
 
-let separator;
 
-function zadatak9 (a) {
+function zadatak9 (a, separator) {
     let result = [];
     if(separator==undefined){
         for(var i = 0; i < a.length; i++) {
