@@ -43,7 +43,7 @@ function nadjiMinimum(niz) {
             smallest = niz[i]
         }
     }
-
+// Komentar: kako znas da je bas na i - 2 indeksu najmanji? ;) 
     return (`index is ${i - 2} number is ${smallest}`)
 }
 console.log(nadjiMinimum(niz))
@@ -109,6 +109,11 @@ function jelSimetrican(array){
         j--;
     }
     
+    //KOMENTAR: Lepo si uradio, samo bih ja preradio da ne prolazis kroz ceo niz nego samo do polovine.
+    // Nepotrebno je da prolazis kroz ceo iz razloga sto ako je leva polovina jednaka desnoj - niz je simetrican. 
+    // Ako je niz sa neparnim brojem elemenata - polovinu niza smatraj da je ceo broj. Primer: niz ima 7 elemenata, polovinu smatras da je 3.
+    // Za takav niz bi isao od prvog do treceg clana niza od pocetka i proveravao da li je jednak od prvog do treceg ali od pozadi.
+    // Tvoje resenje je apsolutno tacno i radi, nego samo kazem da si mogao na jos jedan nacin ;)
     return isSymmetric
 }
 console.log(jelSimetrican([2, 4, -2, 7, -2, 4, 2]));
