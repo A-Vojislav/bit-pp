@@ -1,0 +1,127 @@
+.img1{
+    position: relative;
+    top: 50px;
+    left: 100px;
+    margin-bottom: 10px;
+}
+.img2{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.link{
+    color:  black;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+}
+.jedan{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+}
+.dva{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    color: yellow;
+    position: absolute;
+}
+.tri{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: red;
+    position: absolute;
+}
+.cetiri{
+    
+    margin-top: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: black;
+}
+.pet{
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: red;
+    position: relative;
+    top: -20px;
+}
+.sest{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    color: yellow;
+    position: relative;
+    top: -40px;
+}
+.sedam{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: black;
+    position: absolute;
+   
+}
+.osam{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    color: yellow;
+    position: absolute;
+    top: 2250px;
+    left: 100px;
+    float: left;
+    z-index: 1;
+}
+.devet{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: red;
+    position: absolute;
+    top: 2350px;
+    left: 200px;
+    float: left;
+    z-index: 1;
+}
+.deset{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: black;
+    position: absolute;
+    top: 2750px;
+    
+   
+}
+.jedanest{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    color: yellow;
+    position: absolute;
+    top: 2650px;
+    left: 100px;
+    float: left;
+    z-index: 1;
+}
+.dvanest{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: red;
+    position: absolute;
+    top: 2550px;
+    left: 200px;
+    float: left;
+    z-index: 1;
+}

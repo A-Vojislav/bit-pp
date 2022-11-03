@@ -1,0 +1,15 @@
+.nav{
+    width: 960px;
+    float: right;
+    background-color: red;
+    color: white;
+    display: inline;
+}
+.lista{
+    list-style-type: none;
+    float: right;
+}
+.lista li{
+    display: inline-block;
+    margin: 10px;
+}
