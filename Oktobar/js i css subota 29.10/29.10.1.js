@@ -200,9 +200,9 @@ console.log(zadatak10(deseti))
 // non-numeric values.
 
 //KOMENTAR: Ovde si malo mutio, u sustini si dobio sto si hteo ali nisi uoblicio. Neka ti funkcija dobije oblik :)
-
+//jesam sto kazes mutio i toliko zamutio da sad nebi umeo da ga raspletem,uoblicio sam za sad pa cu se vratiti na ovaj kad budem malo odmorniji :)
 const arrstring = ['1',2,'o','d',3,4,5,'w']
-
+function filterZadatak11(arrstring){
 const arrbrojeva = [];
 
 arrstring.forEach(function (jelbroj) {
@@ -210,7 +210,8 @@ arrstring.forEach(function (jelbroj) {
     });
 
 console.log(arrbrojeva.filter(Number.isInteger));
-
+}
+filterZadatak11(arrstring)
 // 12. Write a function to calculate how many years there are left until retirement based on the
 // year of birth. Retirement for men is at age of 65 and for women at age of 60. If someone is
 // already retired, a proper message should be displayed.
@@ -238,17 +239,41 @@ console.log(doPenzije('female',55));
 //KOMENTAR: Sta ako je broj 11? :) Nisi pokrio brojeve vece od 3.
 // Ja bih ovo uradio na nacin da broj pretvorim u string, pa proveravam poslednji element stringa. Zasto poslednji?
 // Zato sto od poslednjeg zavisi da li je 11th ili 1st :) Ili je mozda 23rd.
+//da, nisam dovoljno razmisljao o ovom zadatku, cim je krenulo da se redja od 3 nadalje sve je 'rd, ustvari nije.
+// moram jos da radim na ovome, ali cini mi se da sam ih sve pokrio
 
 function humanizacijaBroja(number){
-    if (number==1){
-        return `Number 1 = 1st`;
-    } else if(number==2){
-        return `Number 2 = 2nd`;
-    }   else if(number==2){
-        return `Number 3 = 3rd`;
-    } else{
-        return `Number ${number} = ${number}th`;
+  let stringnum=number.toString()
+  let poslednji=stringnum.charAt(stringnum.length-1); 
+    if (number<=0){
+        return `nema sufiks, unesi veci ili pozitivan broj`
     }
-}
-console.log(humanizacijaBroja(1111));
+  if (number>=1 && number<=10){
+    if (poslednji == '1') {
+        return stringnum + 'st';
+    } else if (poslednji === '2') {
+        return stringnum + 'nd';
+    } else if (poslednji === '3') {
+        return stringnum + 'rd';
+    } else {
+        return stringnum + 'th';
+    }
+    
+  }
+         if (number>10 && number<21){
+            return stringnum +'th'
+  } 
+        if (number>20 && number <Infinity) {
+            if(poslednji=='1'){
+            return stringnum + 'st';
+        } else if (poslednji === '2') {
+            return stringnum + 'nd';
+        } else if (poslednji === '3') {
+            return stringnum + 'rd';
+        } else {
+            return stringnum + 'th';
+        }
+    }
+} 
+console.log(humanizacijaBroja(555));
 
