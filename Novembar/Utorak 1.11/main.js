@@ -33,18 +33,19 @@ console.log(pomnoziPozitivne([-3, 11, 5, 3.4, -8]))
 // Input array: [4, 2, 2, -1, 6]
 // Output: -1, 3
 
-const niz = [4, 2, 2, -1, 6]
+const niz = [4,2,2,-1,6]
 function nadjiMinimum(niz) {
     
     let smallest = niz[0]
 
-    for (i = 1; i < niz.length; i++) {
+    for (i = 0; i < niz.length; i++) {
         if (niz[i] < smallest) {
             smallest = niz[i]
         }
     }
 // Komentar: kako znas da je bas na i - 2 indeksu najmanji? ;) 
-    return (`index is ${i - 2} number is ${smallest}`)
+//sad kad kazes stvarno ne znam, nego mi bez toga izbacuje da je index 5, a trebalo bi 3 jer array pocinje od 0
+    return (`index is ${i} number is ${smallest}`)
 }
 console.log(nadjiMinimum(niz))
 
@@ -114,10 +115,31 @@ function jelSimetrican(array){
     // Ako je niz sa neparnim brojem elemenata - polovinu niza smatraj da je ceo broj. Primer: niz ima 7 elemenata, polovinu smatras da je 3.
     // Za takav niz bi isao od prvog do treceg clana niza od pocetka i proveravao da li je jednak od prvog do treceg ali od pozadi.
     // Tvoje resenje je apsolutno tacno i radi, nego samo kazem da si mogao na jos jedan nacin ;)
+    //Hvala za sugestiju, sad sam se setio da si mi to rekao i prosli put nego mi je isparilo. dakle sad ovde ovde mogu da dodam /2
+    //i to bi bilo optimizovanije resenje
     return isSymmetric
 }
-console.log(jelSimetrican([2, 4, -2, 7, -2, 4, 2]));
+console.log('6.'+jelSimetrican([2, 4, -2, 7, -2, 4, 2]));
 
+function jelSimetrican2(array){ 
+    let isSymmetric = false;
+    let j = array.length -1;
+    for(let i = 0; i< array.length; i++) {
+        if (i == j) {
+            break;
+        }
+        if ((array[i]/2) == (array[j])/2) {
+            isSymmetric = true;
+        } else {
+            isSymmetric = false;
+            break;
+        }
+    
+        j--;
+    }
+    return isSymmetric
+}
+console.log('6.2.'+jelSimetrican2([2, 4, -2, 7, -2, 4, 2]))
 // 7. Write a program that intertwines two arrays. You can assume the arrays are of the same
 // length.
 // Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
