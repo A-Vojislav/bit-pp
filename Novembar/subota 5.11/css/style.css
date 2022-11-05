@@ -1,0 +1,35 @@
+.img1{
+    width: 1000px;
+    background-image: url('/andrew-ly-KZ0SZ2fEd20-unsplash.jpg');
+    background-size: 200px;
+    background-repeat: repeat-x;
+    
+}
+.img2{
+    background-image: url('/dave-hoefler-m5oOq4iyaeQ-unsplash.jpg');
+    background-size: 200px;
+    background-repeat: repeat-x;
+}
+.img3{
+    background-image: url('/lena-denk-vO_RghTzvxE-unsplash.jpg');
+    background-size: 200px;
+    background-repeat: repeat-x;
+}
+
+body {
+    width: 600px;
+    height: 400px;
+    background-image: url(/andrew-ly-KZ0SZ2fEd20-unsplash.jpg),
+                      url(/dave-hoefler-m5oOq4iyaeQ-unsplash.jpg),
+                      url(/lena-denk-vO_RghTzvxE-unsplash.jpg);
+    background-repeat: no-repeat,
+                       no-repeat,
+                       no-repeat;
+    background-position: top right,
+                         center,
+                         left bottom;
+    background-size:    200px,
+                        200px,
+                        200px 200px;
+}
+    

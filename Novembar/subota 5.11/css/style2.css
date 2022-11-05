@@ -1,0 +1,20 @@
+.h2{
+    background-image: url(/andrew-ly-KZ0SZ2fEd20-unsplash.jpg);
+    background-size: 200px;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+.h3{
+    width: 500px;
+    height: 500px;
+    background-image: url(/dave-hoefler-m5oOq4iyaeQ-unsplash.jpg);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: fixed;
+}
+.h4{
+    background-image: url(/lena-denk-vO_RghTzvxE-unsplash.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+}
