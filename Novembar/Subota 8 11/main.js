@@ -1,0 +1,240 @@
+// 1. Write a function that rotates a list by k elements.
+// For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]
+
+
+function task1 (input, k) {
+    for(var i = 0; i < k; i++) {
+        input.push(input.shift());
+        } return input
+    }
+
+console.log(task1([1,2,3,4,5,6], 3))
+
+// 2. Write a function that takes a number and returns array of its digits.
+
+function task2(input){
+    let result=input.toString().split('');
+    return result
+}
+console.log(task2(234383))
+
+// 3. Write a program that prints a multiplication table for numbers up to 12.
+
+
+function task3(n) {
+    let range = 12;
+    for (let i = 1; i <= range; ++i){
+    console.log( n + " * " +i +
+            " = " + n *
+                i); 
+    } return 0
+}
+console.log(task3(1)+task3(2)+task3(3)+task3(4)+task3(5)+task3(6)+task3(7)+task3(8)+task3(9)+task3(10)+task3(11)+task3(12))
+
+
+// 4.Write a function to find the maximum element in array of numbers. Filter out all non-number
+// elements.
+
+function task4(input){
+    let largest=input[0];
+    
+    for(let i =0; i<input.length; i++){
+        if(typeof input[i] == 'number'&&input[i]<Infinity){
+            if (input[i]>largest){
+                largest=input[i];
+            }   
+        }
+    }return [largest];
+}
+console.log(task4([2,5,3,0,49,55,2022,Infinity]));
+
+// 5. Napisati funkciju koja vraca najveci I najmanji element niza. Rezultat prikazati kao niz.
+
+function task5(input){
+    let largest=input[0];
+    let smallest=input[0]
+    for(let i =0; i<input.length; i++){
+        if(typeof input[i] == 'number'&&input[i]<Infinity){
+            if (input[i]>largest){
+                largest=input[i];
+            }   
+        }
+    }
+    for(let i =0; i<input.length; i++){
+        if(typeof input[i] == 'number'){
+            if (input[i]<smallest){
+                smallest=input[i];
+            }   
+        }
+    }return [largest,smallest];
+}
+console.log(task5([2,5,3,0,49,55,2022,Infinity]));
+
+// 6. Napisati funkciju koja vraća medijanu niza. (Medijana je “srednji” broj niza kada su brojevi
+//     poređani od najmanjeg do najvećeg ako niz ima neparan broj elemenata. Ako ima paran
+//     broj onda se medijana definiše kao aritmetička sredina dve srednje vrednosti).
+
+function task6(input){
+    let sum=0;
+    if (input.length%2==0){
+            return input[input.length/2];
+    } 
+        else{
+            for(let i=0; i<input.length; i++){
+                sum += input[i];
+            } 
+        return sum/input.length
+    } 
+    
+}
+
+console.log( 'task 6: '+task6([1,2,3,9,21,25,29]));
+
+// 7. Write a function to find and return the first, middle and last element of an array if the array
+// has odd number of elements. If number of elements is even, return just the first and the
+// last. In other cases (empty array), input array should be returned.
+
+function task7(input){
+    'use strict'
+    if (input.length%2==0){
+            return [input[0], input[input.length-1]]
+    } 
+        else{
+            return [input[0], input[(input.length-1)/2],input[input.length-1]]
+    } 
+    
+}
+
+console.log(task7([1,2,3,9,21,25,27]));
+
+// 8. Write a function to find the average of N elements. Make the function flexible to receive
+// dynamic number or parameters.
+
+function task8(input){
+    'use strict'
+    let sum=0;
+    for (let i=0;i<input.length;i++){
+        if (typeof input[i] == 'number'){
+            sum+=input[i];            
+        }
+    }return sum/input.length;
+}
+
+console.log(task8([1,2,3,5,9,11,15,17,20]));
+
+//9. Write a function to find all the numbers greater than the average.
+function task9(input){
+    'use strict'
+    let sum=0;
+    let average=0
+    for (let i=0;i<input.length;i++){
+        if (typeof input[i] == 'number'){
+            sum+=input[i];            
+        }
+    }
+    average= sum/input.length;
+    console.log('Average number of input is: '+ average)
+    console.log('list of numbers larger then average:')
+    for(let i=0;i<input.length;i++){
+        if(input[i]>average){
+            console.log(input[i])
+        }
+    }
+    return `task 9 complete`
+}
+
+console.log(task9([1,2,3,5,9,11,15,17,20,25]));
+
+// 10. The body mass index (BMI) is the ratio of the weight of a person (in kilograms) to the
+// square of the height (in meters). Write a function that takes two parameters, weight and
+// height, computes the BMI, and prints the corresponding BMI category:
+//  Starvation: less than 15
+//  Anorexic: less than 17.5
+//  Underweight: less than 18.5
+//  Ideal: greater than or equal to 18.5 but less than 25
+//  Overweight: greater than or equal to 25 but less than 30
+//  Obese: greater than or equal to 30 but less than 40
+//  Morbidly obese: greater than or equal to 40
+
+
+function task10 (weight,height){
+    let result= (weight/(height**2));
+    if(result < 15){
+        result = `Your BMI (${result}) falls within the starvation range`;    
+    }else if((result > 15) && (result < 17.5)){
+        result = `Your BMI (${result}) falls within the anorexic weight range`;
+    }else if((result > 17.5) && (result < 18.5 )){
+        result = `Your BMI (${result}) falls within the underweight range`;
+    }else if((result > 18.5) && (result < 25 )){
+        result = `Your BMI (${result}) falls within the ideal range`;
+    }else if((result > 25) && (result < 30 )){
+        result = `Your BMI (${result}) falls within the overweight range`;
+    }else if((result > 30) && (result < 40 )){
+        result = `Your BMI (${result}) falls within the obese range`;
+    }else {
+        result = `Your BMI (${result}) falls within the morbidly obese range`;
+    }
+
+   return result;
+}
+
+console.log(task10(96,1.83));
+
+// 11. Write a function that takes a list of strings and prints them, one per line, in a rectangular
+// frame.
+
+// function printFrame(arr) {
+//     function fill (str, length, char) {
+//         return (str.length < length) ? fill(str + char, length, char) : str;
+//     }
+
+//     let size = arr.map((str) => {
+//             return str.length;
+// })
+// .reduce((a, b) => {
+//         return Math.max(a, b);
+// });
+
+//     let line = fill('', size + 4, '*');
+
+//     arr = arr.map((element) => {
+//             return '* '+ fill(element, size, ' ') + ' *';
+// })
+//     arr.unshift(line);
+//     arr.push(line);
+
+//     return arr.join('\n');;
+// }
+
+// console.log(printFrame(["Hello", "World", "in", "a", "frame"]));
+
+// 1. Naci najduzu rec u nizu;
+
+// 2. Naci nacin kako da ispisemo prvi i poslednji red (koristiti \n za prelazak u novi red);
+// 3. Prvi red ispisati van petlje, poslednji niz ispisati van petlje
+// 4. Unutar same petlje - Duzina najduze reci minus konkretna rec predstavlja broj razmaka unutar kvadrata koji
+//ispisujemo
+// 4a. * + razmak + sama rec + ispis iz koraka 4. + razmak + * + \n; jer zelimo da se prebaci u novi red
+// 5. Vracamo rezultat;
+// 6. Pozivamo funkciju i prikazujemo rezultat pomocu konzol loga.
+
+function task11(input){
+  //  let inputSplit=input.split(' ');
+    let longest=' ';
+    for (let i=0;i<input.length;i++){
+         let wordLength=input[i].length;
+            if(wordLength>longest){
+                longest=wordLength;
+            }
+    }
+    console.log(longest)  
+    // var result = ' ';
+    // var maxLength = 0;
+    // for (var i = 0; i < input.length; i++) {
+    // var wordLength = input[i].length;
+    // if (wordLength > maxLength) {
+    // maxLength = wordLength;
+    // }
+    // }
+}
+console.log(task11('danas je cetvrtak i ja kasnim sa domacim'))
