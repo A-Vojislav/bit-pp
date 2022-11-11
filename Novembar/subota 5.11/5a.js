@@ -59,3 +59,34 @@ console.log(task3('Vojislave zasto ovoliko kasnis sa domacim'))
 //  4. Kreirati funkciju koja prihvata array, a na izlazu ispisuje niz koji sadrži tipove
 // podataka pojedinačnih elemenata ulaznog niza.
 
+function task4(input){
+  for (let i =0; i<input.length;i++){
+    if (typeof input[i] == 'number' ){
+      console.log(`element ${input[i]} is a number`);
+    } else if(typeof input[i] == 'string'){
+      console.log(`element ${input[i]} is a string`);
+    } else if (typeof input[i] == 'boolean'){
+      console.log(`element ${input[i]} is a Boolean`);
+    } else{
+      console.log(`Nesto nije ok`);
+    }
+  } 
+  return `task4 zavrsen`;
+}
+console.log(task4(['pet', true, 2,'tekst',23]));
+
+// 5. Kreirati funkciju koja prijvata niz stringova kao ulayni parametar, a na izlazu
+// ispisuje samo stringove koji u sebi ne sadrže brojeve. Primer: ulazni niz [“12bb”,
+// “pp”, “as23s”, “00sd”] =&gt; rezultat [“pp”].
+
+function task5(input){
+  for (let i=0; i<input.length;i++){
+     if (input[i].includes('1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0',0) == true ){
+      delete input[i];
+     }
+    }
+
+  return input
+}
+
+console.log(task5(['12bb','pp', 'as23s', '00s','zastava']))
