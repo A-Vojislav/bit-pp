@@ -90,3 +90,4 @@ function task5(input){
 }
 
 console.log(task5(['12bb','pp', 'as23s', '00s','zastava']))
+//ovo nije zavrseno
