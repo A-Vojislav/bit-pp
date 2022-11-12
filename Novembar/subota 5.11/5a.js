@@ -81,13 +81,23 @@ console.log(task4(['pet', true, 2,'tekst',23]));
 
 function task5(input){
   for (let i=0; i<input.length;i++){
-     if (input[i].includes('1'||'2'||'3'||'4'||'5'||'6'||'7'||'8'||'9'||'0',0) == true ){
+     if (input[i].includes('0') == true ){
       delete input[i];
-     }
+     } else if (input[i].includes('1') ==true){
+      delete input[i];
+     } else if(input[i].includes('2')){
+      delete input[i];
+     } 
     }
 
   return input
 }
 
-console.log(task5(['12bb','pp', 'as23s', '00s','zastava']))
-//ovo nije zavrseno
+console.log(task5(['12bb','pp', 'as23s', '00s','zastava','12s']))
+
+
+// 6. Kreirati funkciju koja prima string a kao rezultat ispisuje niz koji u sebi ima:
+// dužinu stringa, prvi karakter stringa, poslednji karakter, središnji karakter ako
+// string ima neparan broj znakova odnosno središnja dva karaktera ako ima paran
+// broj znakova, indeks drugog ponavljanja drugog karaktera u formatu “@ Index # ”
+// ili “not found” ako nema ponavljanja.
