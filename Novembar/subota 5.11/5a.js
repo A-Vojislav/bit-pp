@@ -101,3 +101,73 @@ console.log(task5(['12bb','pp', 'as23s', '00s','zastava','12s']))
 // string ima neparan broj znakova odnosno središnja dva karaktera ako ima paran
 // broj znakova, indeks drugog ponavljanja drugog karaktera u formatu “@ Index # ”
 // ili “not found” ako nema ponavljanja.
+
+function task6(input){
+  let result='';
+  let searchIndex='Not Found';
+  for(let i=0;i<input.length;i++){
+          if(input.length % 2 == 0){
+              result=input[input.length/2-1]+input[input.length/2];
+          } else if (input.length % 2 !== 0){
+              result=input[parseInt(input.length/2)];
+          }
+  } 
+  for ( let i=0;i<input.length;i++){
+      for (let j=i+1; j<input.length-1;j++){
+          if (input[i]==input[j]){
+              searchIndex='@Index '+j;
+          } 
+      }
+  }
+  return [input.length,input[0],input[input.length-1],result,searchIndex]
+
+}
+console.log(task6('Computer'))
+console.log(task6('Science'))
+
+// 7. Dat je ulazni niz [9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8] gde se svaki element ponavlja
+// bar jednom osim dva elementa. Kreirati funkciju koja ispisuje dva elementa koja
+// se ne ponavljaju.
+
+function task7(input){
+  let iterator=0;
+  let result=[];
+  for (let i = 0; i < input.length; i++) {
+       let iterator2=0;
+      for (let j = 0; j < input.length; j++) {
+          if(input[i]!=input[j]){
+              iterator2++;
+              if(iterator2==input.length-1)
+              {
+                  result[iterator]=input[i];
+                  iterator++;
+              }
+          }
+      }
+      
+  }
+return result;
+}
+console.log(task7([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8]));
+
+// 8. Kreirati funkciju koja ulazni niz deli u podnizove duzine N i ispisuje ih.
+// Primer 1: ([2, 3, 4, 5], N=2) =&gt; [[2, 3], [4, 5]]
+// Primer 2: ([2, 3, 4, 5, 6], N=3) =&gt; [[2, 3, 4], [5, 6]]
+
+function task8(input,Number)
+{   
+    var firstPart=[];
+    var secondPart=[];
+    var iterator=0;
+    for (let i = 0; i < Number; i++) 
+    {
+    firstPart[i]= input[i];
+    }
+    for (let j = Number; j < input.length; j++) 
+    {
+    secondPart[iterator]= input[j];
+    iterator++;
+    }
+    return [firstPart,secondPart];
+}
+console.log(task8([2, 3, 4, 5,6], 3) );
