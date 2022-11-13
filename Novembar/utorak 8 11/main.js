@@ -183,58 +183,33 @@ console.log(task10(96,1.83));
 // 11. Write a function that takes a list of strings and prints them, one per line, in a rectangular
 // frame.
 
-// function printFrame(arr) {
-//     function fill (str, length, char) {
-//         return (str.length < length) ? fill(str + char, length, char) : str;
-//     }
-
-//     let size = arr.map((str) => {
-//             return str.length;
-// })
-// .reduce((a, b) => {
-//         return Math.max(a, b);
-// });
-
-//     let line = fill('', size + 4, '*');
-
-//     arr = arr.map((element) => {
-//             return '* '+ fill(element, size, ' ') + ' *';
-// })
-//     arr.unshift(line);
-//     arr.push(line);
-
-//     return arr.join('\n');;
-// }
-
-// console.log(printFrame(["Hello", "World", "in", "a", "frame"]));
-
-// 1. Naci najduzu rec u nizu;
-
-// 2. Naci nacin kako da ispisemo prvi i poslednji red (koristiti \n za prelazak u novi red);
-// 3. Prvi red ispisati van petlje, poslednji niz ispisati van petlje
-// 4. Unutar same petlje - Duzina najduze reci minus konkretna rec predstavlja broj razmaka unutar kvadrata koji
-//ispisujemo
-// 4a. * + razmak + sama rec + ispis iz koraka 4. + razmak + * + \n; jer zelimo da se prebaci u novi red
-// 5. Vracamo rezultat;
-// 6. Pozivamo funkciju i prikazujemo rezultat pomocu konzol loga.
-
 function task11(input){
-  //  let inputSplit=input.split(' ');
-    let longest=' ';
-    for (let i=0;i<input.length;i++){
-         let wordLength=input[i].length;
-            if(wordLength>longest){
-                longest=wordLength;
+    let longest=0;
+    let longestWord='';
+    let output=0;
+    let print='';
+        for (let i=0; i<input.length; i++){
+            if(input[i].length>longest){
+                longest=input[i].length;
+                longestWord=input[i];
             }
-    }
-    console.log(longest)  
-    // var result = ' ';
-    // var maxLength = 0;
-    // for (var i = 0; i < input.length; i++) {
-    // var wordLength = input[i].length;
-    // if (wordLength > maxLength) {
-    // maxLength = wordLength;
-    // }
-    // }
+        }
+        let borders='*'.repeat(longest+4);
+        console.log(borders);
+            let stars='';
+            for (let j=0; j<input.length;j++){
+                if (input[j] !== longestWord){
+                    output=longest-input[j].length
+                    stars=`* ${input[j]+' '.repeat(output)} *`;
+                }
+                if(input[j]===longestWord){
+                    stars=`* ${longestWord} *`;    
+                } 
+                print= `${console.log(stars)}`;
+            }  
+
+       console.log(borders);
+
 }
-console.log(task11('danas je cetvrtak i ja kasnim sa domacim'))
+
+task11(['danas', 'je', 'nedelja','trinaesti','Novembar'])
