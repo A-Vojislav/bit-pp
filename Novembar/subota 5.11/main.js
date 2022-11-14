@@ -211,4 +211,4 @@ function symetry (a) {
         }  return res
     }
         console.log(symetry(['a nut for a jar of tuna']));
-    //have to remove the spaces
+
