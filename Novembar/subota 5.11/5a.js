@@ -56,6 +56,7 @@ function task3(input){
 }
 // KOMENTAR: Svidja mi se resenje kako si razdvojio samoglasnike i suglasnike, bez IF uslova :) 
 // A kasnjenje je skroz u redu dok god uradis :D 
+// Hvala, hvala, nisam sa namerom uradio bez If-a, prosto sam takvu ideju dobio
 console.log(task3('Vojislave zasto ovoliko kasnis sa domacim'))
 
 //  4. Kreirati funkciju koja prihvata array, a na izlazu ispisuje niz koji sadrži tipove
@@ -86,7 +87,7 @@ console.log(task4(['pet', true, 2,'tekst',23]));
 // Primer: sta da je ulazni niz sadrzao string "Pera334455"?
 // Ja bih ovo uradio tako sto na pocetku deklarisem prazan niz u koji u toku provera upisujem samo one elemente koji ne sadrze u sebi bilo koji broj
 // Na kraju kao return vracas samo taj niz.
-
+//ok, kontam da ovo nije zadovoljavajuce jer nejasno ispisuje, veceras kad sednem za komp resavam 
 function task5(input){
   for (let i=0; i<input.length;i++){
      if (input[i].includes('0') == true ){
@@ -98,11 +99,25 @@ function task5(input){
      } 
     }
 
-  return input
+  return input.join(' ')
 }
 
 console.log(task5(['12bb','pp', 'as23s', '00s','zastava','12s']))
 
+//ovo je mozda lepse resenje
+function zadatak5 (input){
+  let temp=[];
+  let proba;
+  
+  for (let i=0; i<input.length; i++){
+      proba = input[i].split('')
+      if (isNaN(proba[i])==true){
+          temp.push(input[i]) 
+      }
+  }
+  console.log(temp)
+}
+zadatak5(['12bb','pp','zastava', 'as23s','Pera123467'])
 
 // 6. Kreirati funkciju koja prima string a kao rezultat ispisuje niz koji u sebi ima:
 // dužinu stringa, prvi karakter stringa, poslednji karakter, središnji karakter ako
@@ -162,22 +177,22 @@ console.log(task7([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8]));
 // Primer 1: ([2, 3, 4, 5], N=2) =&gt; [[2, 3], [4, 5]]
 // Primer 2: ([2, 3, 4, 5, 6], N=3) =&gt; [[2, 3, 4], [5, 6]]
 
-function task8(input,Number)
+function task8(input,a)
 {   
-    var firstPart=[];
-    var secondPart=[];
-    var iterator=0;
-    for (let i = 0; i < Number; i++) 
-    {
+    let firstPart=[];
+    let secondPart=[];
+    let iterator=0;
+    for (let i = 0; i < a; i++) {
     firstPart[i]= input[i];
     }
-    for (let j = Number; j < input.length; j++) 
-    {
+    for (let j = a; j < input.length; j++) {
     secondPart[iterator]= input[j];
     iterator++;
     }
-    return [firstPart,secondPart];
+    return`[${firstPart}],[${[secondPart]}]`;
 }
-console.log(task8([2, 3, 4, 5,6], 3) );
+console.log(task8([2, 3, 4, 5], 2) );
 // Komentar: da ne cepidlacimo, zadatak je dobar, jedino sto ispis bude u formatu [niz, niz], da ne vidim koji su elementi :)
 // No proverio sam sa console logom, radi lepo. Sad da lupas glavu kako ces napraviti ispis da bude lep - totalno mi je nevazno ovde.
+// ovde se nesto cudno desilo, jer koristim quokka od skoro da nebi stalno pokretao debagovanje, imao sam dobar ispis
+//evo ga sredjen
