@@ -29,7 +29,13 @@ function task3(n) {
                 i); 
     } return 0
 }
+
+//KOMENTAR: Ovo resenje zadatka je tacno, ali bilo bi elegantnije da nisi morao da pises task3(1)+... i da na kraju ne radis return 0 :) 
+// Tacno je i ovo, ali tema za razmisljanje kako bi mogao da unapredis funkciju da je pozoves samo jednom i da ne ide return 0.
+
+
 console.log(task3(1)+task3(2)+task3(3)+task3(4)+task3(5)+task3(6)+task3(7)+task3(8)+task3(9)+task3(10)+task3(11)+task3(12))
+
 
 
 // 4.Write a function to find the maximum element in array of numbers. Filter out all non-number
@@ -87,8 +93,12 @@ function task6(input){
     } 
     
 }
+// KOMENTAR: Izmenio sam pocetni niz da bude task6([1,2,3,9,21,25,29,29]), tj dodao sam jos jedan broj na kraj tvog niza.
+// U zadatku kaze: ako je paran broj elemenata niza onda je medijana aritmeticka sredina dve srednje vrednosti.
+// To znaci da je medijana aritmeticka sredina za 9 i 21. Kod tebe bi vratilo da je to 21. Sta mislis zasto? :) 
 
 console.log( 'task 6: '+task6([1,2,3,9,21,25,29]));
+
 
 // 7. Write a function to find and return the first, middle and last element of an array if the array
 // has odd number of elements. If number of elements is even, return just the first and the
