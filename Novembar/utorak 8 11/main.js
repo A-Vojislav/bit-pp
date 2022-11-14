@@ -36,6 +36,20 @@ function task3(n) {
 
 console.log(task3(1)+task3(2)+task3(3)+task3(4)+task3(5)+task3(6)+task3(7)+task3(8)+task3(9)+task3(10)+task3(11)+task3(12))
 
+//Evo druga varijanta :)
+
+function zadatak3(input) {
+    let result = '';
+
+    for (let i = 1; i <= 12; i++) {
+      for (let j = 1; j <= input; j++) {
+        result += i+'*'+j+'='+i * j + '\n';
+      }
+      result += '\n';
+    }
+    return result;
+  }
+  console.log(zadatak3(12));
 
 
 // 4.Write a function to find the maximum element in array of numbers. Filter out all non-number
@@ -80,10 +94,11 @@ console.log(task5([2,5,3,0,49,55,2022,Infinity]));
 //     poređani od najmanjeg do najvećeg ako niz ima neparan broj elemenata. Ako ima paran
 //     broj onda se medijana definiše kao aritmetička sredina dve srednje vrednosti).
 
+
 function task6(input){
     let sum=0;
     if (input.length%2==0){
-            return input[input.length/2];
+            return (input[input.length/2-1]+input[input.length/2])/2;
     } 
         else{
             for(let i=0; i<input.length; i++){
@@ -96,6 +111,9 @@ function task6(input){
 // KOMENTAR: Izmenio sam pocetni niz da bude task6([1,2,3,9,21,25,29,29]), tj dodao sam jos jedan broj na kraj tvog niza.
 // U zadatku kaze: ako je paran broj elemenata niza onda je medijana aritmeticka sredina dve srednje vrednosti.
 // To znaci da je medijana aritmeticka sredina za 9 i 21. Kod tebe bi vratilo da je to 21. Sta mislis zasto? :) 
+//to je zato sto nisam tako podesio da bude, nego sam ga namestio da izabere srednji index, a posto se vraca float
+//vrednost on bira sledeci u nizu sto dodje u mom nizu broj 21, tj nisam racunao arimeticku sredinu nego samo sam uzimao broj iz niza
+//sredjeno! :D
 
 console.log( 'task 6: '+task6([1,2,3,9,21,25,29]));
 
