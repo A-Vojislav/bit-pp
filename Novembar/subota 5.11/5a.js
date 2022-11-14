@@ -54,6 +54,8 @@ function task3(input){
       return ` U tekstu koji ima ${input.length} slova, od kojih ${samoglasnika} samoglasnika i ${suglasnika} suglasnika `
 
 }
+// KOMENTAR: Svidja mi se resenje kako si razdvojio samoglasnike i suglasnike, bez IF uslova :) 
+// A kasnjenje je skroz u redu dok god uradis :D 
 console.log(task3('Vojislave zasto ovoliko kasnis sa domacim'))
 
 //  4. Kreirati funkciju koja prihvata array, a na izlazu ispisuje niz koji sadrži tipove
@@ -78,6 +80,12 @@ console.log(task4(['pet', true, 2,'tekst',23]));
 // 5. Kreirati funkciju koja prijvata niz stringova kao ulayni parametar, a na izlazu
 // ispisuje samo stringove koji u sebi ne sadrže brojeve. Primer: ulazni niz [“12bb”,
 // “pp”, “as23s”, “00sd”] =&gt; rezultat [“pp”].
+
+
+//KOMENTAR: Ovde nisi dobro postavio uslove, verovatno nisi dobro shvatio sta treba da uradis.
+// Primer: sta da je ulazni niz sadrzao string "Pera334455"?
+// Ja bih ovo uradio tako sto na pocetku deklarisem prazan niz u koji u toku provera upisujem samo one elemente koji ne sadrze u sebi bilo koji broj
+// Na kraju kao return vracas samo taj niz.
 
 function task5(input){
   for (let i=0; i<input.length;i++){
@@ -171,3 +179,5 @@ function task8(input,Number)
     return [firstPart,secondPart];
 }
 console.log(task8([2, 3, 4, 5,6], 3) );
+// Komentar: da ne cepidlacimo, zadatak je dobar, jedino sto ispis bude u formatu [niz, niz], da ne vidim koji su elementi :)
+// No proverio sam sa console logom, radi lepo. Sad da lupas glavu kako ces napraviti ispis da bude lep - totalno mi je nevazno ovde.
