@@ -96,17 +96,15 @@ console.log(task5([2,5,3,0,49,55,2022,Infinity]));
 
 
 function task6(input){
-    let sum=0;
-    if (input.length%2==0){
-            return (input[input.length/2-1]+input[input.length/2])/2;
-    } 
-        else{
-            for(let i=0; i<input.length; i++){
-                sum += input[i];
-            } 
-        return sum/input.length
-    } 
-    
+    input.sort(function(a,b){
+        return a-b;
+      });
+    let notOddArray=Math.floor(input.length/2)
+    if(input.length%2){
+        return input[notOddArray];
+    }
+
+    return (input[notOddArray-1]+input[notOddArray])/2;
 }
 // KOMENTAR: Izmenio sam pocetni niz da bude task6([1,2,3,9,21,25,29,29]), tj dodao sam jos jedan broj na kraj tvog niza.
 // U zadatku kaze: ako je paran broj elemenata niza onda je medijana aritmeticka sredina dve srednje vrednosti.
@@ -114,6 +112,7 @@ function task6(input){
 //to je zato sto nisam tako podesio da bude, nego sam ga namestio da izabere srednji index, a posto se vraca float
 //vrednost on bira sledeci u nizu sto dodje u mom nizu broj 21, tj nisam racunao arimeticku sredinu nego samo sam uzimao broj iz niza
 //sredjeno! :D
+//hvala za korekcije, mislim da sam konacno shvatio, a ako nisam onda izvini stvarno, ne znam sta ne kontam
 
 console.log( 'task 6: '+task6([1,2,3,9,21,25,29]));
 
