@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+}
+
+header{
+    display: flex;
+}
+img {
+    float: left;
+    border-radius: 100%;
+    margin-left: 30px;
+}
+.headin{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+.basic{
+    display: flex;
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+    justify-content: center;
+    text-align: left;
+}
+h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid black;
+    margin-left: 20px;
+    padding-left: 20px;
+}

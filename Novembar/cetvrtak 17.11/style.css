@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+
+}
+
+.basic{
+    display: flex;
+    
+}
+
+.main{
+    display: flex;
+    background-color: brown;
+    width: 49%;
+    height: 780px;
+    align-items: center;
+    justify-content: center;
+
+}
+.parent{
+    display: flex;
+    width: 49%;
+    height: 780px;
+    flex-direction: column;
+}
+.child1{
+    display: flex;
+    box-sizing: border-box;
+    flex-basis: 33%;
+    height: 33.3%;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+}
+.child2{
+    display: flex;
+    box-sizing: border-box;
+    flex-basis: 33%;
+    height: 33.3%;
+    background-color: orange;
+    align-items: center;
+    justify-content: center;
+}
+.child3{
+    display: flex;
+    box-sizing: border-box;
+    flex-basis: 33%;
+    height: 33.3%;
+    background-color: yellow;
+    align-items: center;
+    justify-content: center;
+}
