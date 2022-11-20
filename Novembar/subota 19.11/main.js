@@ -21,6 +21,8 @@ function tellFortune (pName,kids,location,job){
     console.log(`You will be a ${job} in ${location}, married with ${pName} with ${kids} kids`)
 }
 tellFortune('Tijana','Vojislav','Beograd','Business owner')
+tellFortune('Tijana','Vojislav','Beograd','Business owner')
+tellFortune('Tijana','Vojislav','Beograd','Business owner')
 
 
 // 2. Write a function named calculateDogAge that:
@@ -32,7 +34,7 @@ tellFortune('Tijana','Vojislav','Beograd','Business owner')
 // years.
 
 function calculateDogAge(input){
-    result=`Your dogo has ${input} in human years, but in dog years he/she has ${input*7}`
+    result=`Your doggo has ${input} in human years, but in dog years he/she has ${input*7}`
     console.log(result)
 }
 calculateDogAge(15)
@@ -79,30 +81,53 @@ function fahrenheitToCelsius(input){
 }
 fahrenheitToCelsius(60)
 
+// 6. Create a function that finds how many prime numbers there are, up to the given integer.
+// Examples: primeNumbers(10) ➞ 4 // 2, 3, 5 and 7
+// primeNumbers(20) ➞ 8 // 2, 3, 5, 7, 11, 13, 17 and 19
+// primeNumbers(30) ➞ 10 // 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29
+
+function howManyPrime(input) {
+    let result = [];
+
+    for (let i = 2; i <= input; i++) {
+        let isPrime = false;
+        for (let j = 2; j <= i; j++) {
+            if (i % j === 0 && i != j) {
+                isPrime = true;
+                break;
+            }
+        }
+
+        if (!isPrime) {
+            result.push(i)
+        }
+    }
+
+    console.log(`There are ${result.length} prime numbers: ` + result);
+}
+
+howManyPrime(11)
+
+
+
 // 7. Create a function that returns an array that expands by 1 from 1 to the value of the input, and then
 // reduces back to 1. Items in the arrays will be the same as the length of the arrays.
 
-// Examples:
-// diamondArrays(1) ➞ [1],
-// diamondArrays(2) ➞ [1, 2, 2, 1]
-// diamondArrays(5) ➞ [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 2, 2, 1]
+function makeDiamondArr(input){
+    let result=[];
+    let pushArr=function(result,i){
+        for (let j=1; j<=i;j++ ){
+            result.push(i)
+        }
+    }
 
-// function diamondArrays(input){
-//     let printingArray=[];
-//     if (typeof input!=='number') {
-//         console.log('Not a number');
-//     }
-//     for (let i=1; i<=input; i++){
-//         if (input==1){
-//             printingArray=[input];
-//             console.log(printingArray);
-//         }
-//         if(i>=2){
-//             printingArray.push(i,i)
-//         }
-        
-//     }
-//     console.log(printingArray)
-// }
-// diamondArrays(2)
+    for (let i=1;i<=input;i++){
+        pushArr(result,i);
+    }
+    for(let i=input-1;i>=1;i--){
+        pushArr(result,i)
+    }
+    return result
+}
 
+console.log(makeDiamondArr(3))
