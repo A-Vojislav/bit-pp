@@ -1,0 +1,74 @@
+ul{
+    list-style: none;
+    text-decoration: none;
+    a:link{
+        color: green;
+    }
+    a:active{
+        color: yellow;
+    }
+    a:visited { 
+        color: orange;
+     }
+    .important{
+        font-weight: bold;
+    }
+}
+
+@for $i from 1 through 4 {
+    .text#{$i} {font-size: 10px * $i; }
+}
+
+@mixin background-color($textbackground){
+    @if($textbackground==1){
+        background-color: green;
+    }
+    @if($textbackground==2){
+        background-color: gray;
+    }
+    @if($textbackground==3){
+        background-color: blue;
+    }
+    @if($textbackground==4){
+        background-color: yellow;
+    }
+}
+
+.paragrafi{@include background-color(2)}
+
+
+@mixin boxOFContent($input) {
+    @if($input==1){
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border: 10px solid green;
+    box-sizing: border-box;
+    background: red;
+    display: inline-block;
+    }
+    @if($input==2){
+        width: 300px;
+        height: 200px;
+        padding: 25px;
+        border: 10px solid purple;
+        box-sizing: border-box;
+        background: yellow;
+        display: inline-block; 
+    }
+} 
+
+
+$colonWidth: 1px;
+@function tableWidth($noOfCol,$tableWidth){
+    @return ($tableWidth/$noOfCol);
+    
+}
+
+.box1{@include boxOFContent(1)}
+.box2{@include boxOFContent(2)}
+
+table{
+    border: 2px solid black;
+    width: tableWidth(2, 350px);
+}
