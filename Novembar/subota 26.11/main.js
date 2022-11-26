@@ -176,12 +176,26 @@ console.log(task10('Oct 24 2018'));
 // 4321
 
 let task11= function(input){
-    
-    for(let i=0; i<input.length;i++){
-        console.log(input[i])
-    }
+    let largest=0;
 
+    for (i=0; i<=largest;i++){
+        if (input[i]>largest) {
+            largest=input[i];
+        }
+    }
+    let temp=largest.toString().length
+    let emptySpace=0;
+    for (let i=0; i<input.length;i++){
+        if (input[i] !== largest){
+            emptySpace=temp-input[i].toString().length;
+            console.log(' '.repeat(emptySpace)+input[i])
+        } else if(input[i]==largest){
+            console.log(largest)
+        }
+        
+    }
 }
 
-console.log(task11([78, 111, 4, 4321]));
+task11([78, 111, 4, 4321]);
+
 
