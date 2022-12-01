@@ -5,7 +5,20 @@
 // [[0, 0.5, 1, 2, 3, 4.4], [8], [12, 18, "X", "Y", "Z"], ["a", "b", "d"], ["e", "f", "f"], ["p", "s"]]
 
 
+// console.log(2<3+5)
 
+// var x=[1,8,9,9,2]
+var x=10
+var y=5
+
+console.log(10*'abc')
+// var a=12
+// var result=2
+// if(a>10){
+//     result+=2
+// } else result-=2
+
+// console.log(result)
 
 
 
