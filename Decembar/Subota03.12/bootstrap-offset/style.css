@@ -1,0 +1,25 @@
+.row {
+  padding: 5px;
+}
+
+.col {
+  border: 1px solid black;
+  background-color: bisque;
+  margin: 5px;
+  border-radius: 4px;
+  height: 35px;
+}
+
+.col-md-4 {
+  border: 1px solid black;
+  background-color: grey;
+  border-radius: 4px;
+  height: 35px;
+}
+
+.col-md-3 {
+  border: 1px solid black;
+  background-color: yellowgreen;
+  border-radius: 4px;
+  height: 35px;
+}/*# sourceMappingURL=style.css.map */
