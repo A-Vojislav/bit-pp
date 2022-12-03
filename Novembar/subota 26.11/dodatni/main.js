@@ -5,24 +5,6 @@
 // [[0, 0.5, 1, 2, 3, 4.4], [8], [12, 18, "X", "Y", "Z"], ["a", "b", "d"], ["e", "f", "f"], ["p", "s"]]
 
 
-// console.log(2<3+5)
-
-// var x=[1,8,9,9,2]
-var x=10
-var y=5
-
-console.log(10*'abc')
-// var a=12
-// var result=2
-// if(a>10){
-//     result+=2
-// } else result-=2
-
-// console.log(result)
-
-
-
-
 // 2. Create a function that takes the dimensions of two triangles (as arrays) and checks if the first triangle fits into the second one.
 // Triangle fits if it has the same or smaller size as the hole.
 // The function should return false if the triangle with that dimensions is not possible.
