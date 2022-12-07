@@ -91,3 +91,47 @@
 // canGiveBlood("A-", "B-") ➞ false
 // canGiveBlood("A-", "AB+") ➞ true
 // .
+
+let bloodOkOrNot=function(donor, receiver){
+    let bloodOk=`the type of blood is compatible for the reciver`;
+    let forbiden='the blood types are not compatable';
+
+
+        if (donor=='A'){
+            donor='A-'
+        } else if(donor=='B'){
+            donor='B-'
+        } else if (donor=='AB'){
+            donor='AB+'
+        }else if(donor.includes('+')){
+            donor='O+'
+        } 
+        function testParameters(){
+
+            if (donor==receiver || donor=='O-'){
+                return bloodOk
+            } 
+            if(receiver=='O-' && donor!='O-'){
+                return forbiden
+            }
+
+            if (donor=='O+' && receiver=='AB+' || receiver=='A+'||receiver=='B+'){
+                return bloodOk
+            } else if(donor=='B-' && receiver=='AB+'||receiver=='AB-'||receiver=='B+'||receiver=='B-'){
+                return bloodOk
+            } else if(donor=='B+' && receiver=='AB+'){
+                return bloodOk
+            } else if(donor=='A-' && receiver=='AB+' || receiver=='AB-'|| receiver=='A+'){
+                return bloodOk
+            } else if(donor=='A+' && receiver=='AB+' ){
+                return bloodOk
+            } else if(donor=='AB-' && receiver=='AB+'){
+                return bloodOk
+            } else{
+                return forbiden
+            }
+    }
+    return testParameters()
+}
+
+console.log(bloodOkOrNot('A','AB+'))
