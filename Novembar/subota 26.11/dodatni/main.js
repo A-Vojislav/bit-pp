@@ -134,4 +134,4 @@ let bloodOkOrNot=function(donor, receiver){
     return testParameters()
 }
 
-console.log(bloodOkOrNot('A','AB+'))
+// console.log(bloodOkOrNot('A','AB+'))
