@@ -29,7 +29,7 @@ function task1(){
     let BreadPrice=Bread.quantity * Bread.price;
     let HamPrice=Ham.quantity * Ham.price;
 
-    return ` The price of all groceris ${eggsPrice+BreadPrice+HamPrice} RSD`
+    return ` The price of all groceries is ${eggsPrice+BreadPrice+HamPrice} RSD`
 
 }
 console.log(task1(groceries))
@@ -61,8 +61,15 @@ let input= {
 }
 
 function task2(input){
+    let max= Math.max(input.goldEarings.price,input.goldWatch.price,input.diamondBracelet.price)
 
-    console.log(max)
+    if (max==850){
+        return input.diamondBracelet
+    } else if(max==450){
+        return input.goldWatch
+    } else {
+        return input.goldEarings
+    }
 }
 console.log(task2(input))
 
@@ -76,6 +83,17 @@ console.log(task2(input))
 // mapLetters("grapes") ➞ { g: [0], r: [1], a: [2], p: [3], e: [4], s: [5] }
 
 
+function task3(data){
+    let print={};
+    for (let i in data){
+        print[data[i]]=Number(i)
+        
+    }
+    console.log(print)
+    return 
+}
+
+task3('Vojislav');
 
 
 
@@ -92,11 +110,62 @@ console.log(task2(input))
 // determineWhoCursedTheMost([{ me: 10,spouse: 5 }, { me: 9,  spouse:
 // 44 }, { me: 10,    spouse: 55}]) ➞ "SPOUSE!"
 
+let determine = {
+    firstRound: {
+        me:10,
+        spouce: 5
+    },
+    secondRound: {
+        me:0,
+        spouce: 5
+    },
+    thirdRound: {
+        me:5,
+        spouce: 5
+    }
+ }
+
+function task4(determine){
+    let me=determine.firstRound.me + determine.secondRound.me + determine.thirdRound.me;
+    let spouce=determine.firstRound.spouce + determine.secondRound.spouce + determine.thirdRound.spouce;
+
+    if(me==spouce){
+        return console.log('its a draw')
+    } else if(me<spouce){
+        return console.log('Spouce!')
+    } else if(me>spouce){
+        return console.log('Me!')
+    }
+}
+task4(determine)
 
 
 // 5. Create a function that converts color in RGB format to Hex format.
 // Examples:
 // rgbToHex({red: 0, green: 128,  blue: 192}) ➞ "#0080c0"
+
+let dataTask5={red:0,Green: 128, blue:192}
+function task5(dataTask5){
+    let r = dataTask5.red;
+    let g = dataTask5.Green;
+    let b = dataTask5.blue;
+    r = parseInt(r).toString(16);
+    g = parseInt(g).toString(16);
+    b = parseInt(b).toString(16);
+  
+    if (r.length == 1)
+      r = "0" + r;
+    if (g.length == 1)
+      g = "0" + g;
+    if (b.length == 1)
+      b = "0" + b;
+  
+    return "#" + r + g + b;
+}
+
+console.log(task5(dataTask5))
+
+
 // 6. Create a function that takes an amount of monetary change (e.g. 47 
 // cents) and breaks down the most efficient way that change can be 
 // made using USD quarters, dimes, nickels and pennies. Your function 
@@ -111,6 +180,15 @@ console.log(task2(input))
 // makeChange(47) ➞ { "q": 1, "d": 2, "n": 0, "p": 2 }
 // makeChange(24) ➞ { "q": 0, "d": 2, "n": 0, "p": 4 }
 // makeChange(92) ➞ { "q": 3, "d": 1, "n": 1, "p": 2 }
+
+function task6(input){
+    
+
+}
+
+console.log(task6(47))
+
+
 // 7. Create a function that takes an array of objects like { name: "John", 
 // notes: [3, 5, 4]} and returns an array of objects like { name: "John", 
 // avgNote: 4 }. If student has no notes (an empty array) then let's 
