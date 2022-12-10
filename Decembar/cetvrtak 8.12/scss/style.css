@@ -189,4 +189,16 @@ footer .row {
 footer .template-demo button {
   color: black;
   border: 2px solid black;
+}
+
+@media screen and (min-width: 900px) {
+  nav .dropdown {
+    display: none;
+  }
+  nav .nav {
+    display: inline-flex;
+  }
+  nav ul {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */
