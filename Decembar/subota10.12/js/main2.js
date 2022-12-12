@@ -181,12 +181,55 @@ console.log(task5(dataTask5))
 // makeChange(24) ➞ { "q": 0, "d": 2, "n": 0, "p": 4 }
 // makeChange(92) ➞ { "q": 3, "d": 1, "n": 1, "p": 2 }
 
-function task6(input){
-    
 
+function task6(inputTask6,coins){
+
+    let penniesCounter=0;
+    let nickelCounter=0;
+    let dimeCounter=0;
+    let quartersCounter=0;
+    let n=coins.length;
+    let temp=inputTask6;
+   // console.log(temp)
+
+    if( temp>24){
+        for(let i=0; i<temp;i++){
+            if(temp>24){
+                temp-=coins[3];
+                quartersCounter++
+            }
+        }
+    }
+    if(temp>10){
+        for(let i=0; i<temp;i++){
+            if(temp>10){
+                temp-=coins[2];
+                dimeCounter++
+            }
+        }
+    }
+    if(temp>5){
+        for(let i=0; i<temp;i++){
+            if(temp>5){
+                temp-=coins[1];
+                nickelCounter++
+            }
+        }
+    }
+    if(temp>=0){
+        for(let i=0; i<temp+1;i++){
+            if(temp>=0){
+                temp-=coins[0];
+                penniesCounter++
+            }
+        }
+    }
+    return {quartersCounter,dimeCounter,nickelCounter,penniesCounter}
 }
 
-console.log(task6(47))
+console.log(task6(92,[1,5,10,25]))
+
+
 
 
 // 7. Create a function that takes an array of objects like { name: "John", 
@@ -201,6 +244,30 @@ console.log(task6(47))
 // [
 //   { name: "John", avgNote: 4 }
 // ]
+const inputTask7={
+    name: "John", 
+    notes: [3, 5, 4]
+}
+
+function task7(inputTask7){
+    let avgNote=0;
+    let name=inputTask7.name;
+    let calc=inputTask7.notes;
+
+
+    if(calc.length>0){
+        for(let i=0; i<calc.length;i++){
+            avgNote+=calc[i]
+        }
+        avgNote=avgNote/calc.length
+    }
+
+    return {name, avgNote }
+
+}
+//console.log(task7(inputTask7))
+
+
 // 8. Given an object with students and the grades that they made on the 
 // tests that they took, determine which student has the best Test 
 // Average. The key will be the student's name and the value will be an 
@@ -208,3 +275,33 @@ console.log(task6(47))
 // You do not need to return their Test Average.
 // getBestStudent([{  name: ‘John’, grades: [100, 90, 80]}, {name: ‘Bob’, 
 // grades: [100, 70, 80]}...]) ➞ "John" // John's avg = 90 // Bob's avg = 
+
+
+
+function task8(inputTask8){
+
+    let person1=inputTask8[0]
+    let person2=inputTask8[1]
+    let result=person2.name;
+    let calc1=0;
+    let calc2=0;
+
+            for(let i=0; i<person1.grades.length;i++){
+                calc1+=person1.grades[i];
+            }
+            calc1=calc1/person1.grades.length;
+
+
+            for(let i=0; i<person2.grades.length;i++){
+                calc2+=person2.grades[i];
+            }
+            calc2=calc2/person2.grades.length;
+
+            if(calc1>calc2){
+                result= person1.name
+            }
+
+    return result +' has the higher average mark'
+}
+//console.log(task8([{  name: 'John', grades: [100, 90, 80]}, {name: 'Bob', 
+//    grades: [100, 70, 80]}]))

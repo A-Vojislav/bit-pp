@@ -5,6 +5,7 @@
 // [[0, 0.5, 1, 2, 3, 4.4], [8], [12, 18, "X", "Y", "Z"], ["a", "b", "d"], ["e", "f", "f"], ["p", "s"]]
 
 
+
 // 2. Create a function that takes the dimensions of two triangles (as arrays) and checks if the first triangle fits into the second one.
 // Triangle fits if it has the same or smaller size as the hole.
 // The function should return false if the triangle with that dimensions is not possible.
@@ -14,6 +15,21 @@
 // doesTriangleFit([1, 2, 3], [1, 2, 2]) ➞ false
 // doesTriangleFit([1, 2, 4], [1, 2, 6]) ➞ false
 
+
+function task2(firstTriangle,secondTriangle) {
+    let print=`The triangle doesent fit`;
+
+        if( firstTriangle[0] <= secondTriangle[0]&&
+            firstTriangle[1] <= secondTriangle[1]&&
+            firstTriangle[2] <= secondTriangle[2]){
+
+            print = `The triangle fits`;
+            }
+
+    return print
+}
+
+console.log(task2([1, 5, 1], [1, 3, 1]));
 
 
 
@@ -63,6 +79,53 @@
 //   [67, "x", 98, "x", 44],
 //   [21, "x", 24, 30, 52]
 // ]) ➞ false
+
+
+function task4(input) {
+
+    let result = false;
+    let win= `It's a BINGO!!!!!`
+    let diagonalCounter = 0;
+
+    for (let i = 0; i < input.length; i++) {
+        let horisontalCounter = 0;
+        let verticalCounter = 0;
+
+        for (let j = 0; j < input[i].length; j++) {
+            if (input[i][j] == "x") {   
+                horisontalCounter++;
+            }
+            if (input[j][i] == "x") {   
+                verticalCounter++;
+            }
+            if (input[j][i] == input[j][i] && input[j][i] == "x") { 
+                diagonalCounter++;
+            }
+        }
+        if(horisontalCounter == 5){
+            result = win;
+            break;
+        }
+        if(verticalCounter == 5){
+            result = win;
+            break;
+        }
+
+    }
+    if(diagonalCounter == 5){
+        result = win;
+      }
+
+
+    return result;
+}
+console.log(task4([
+    ["x", 43, 31, 74, 87],
+    [64, "x", 47, 32, 90],
+    [37, 65, "x", 83, 54],
+    [67, 98, 39, "x", 44],
+    [21, 59, 24, 30, "x"]
+    ]));
 
 
 
@@ -134,4 +197,4 @@ let bloodOkOrNot=function(donor, receiver){
     return testParameters()
 }
 
-// console.log(bloodOkOrNot('A','AB+'))
+ console.log(bloodOkOrNot('A','AB+'))
