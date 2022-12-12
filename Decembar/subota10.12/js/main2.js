@@ -188,46 +188,58 @@ function task6(inputTask6,coins){
     let nickelCounter=0;
     let dimeCounter=0;
     let quartersCounter=0;
-    let n=coins.length;
     let temp=inputTask6;
-   // console.log(temp)
+
 
     if( temp>24){
         for(let i=0; i<temp;i++){
             if(temp>24){
                 temp-=coins[3];
-                quartersCounter++
+                quartersCounter++;
             }
         }
     }
-    if(temp>10){
+
+    if(temp>9){
         for(let i=0; i<temp;i++){
-            if(temp>10){
+            if(temp>9){
                 temp-=coins[2];
-                dimeCounter++
+                dimeCounter++;
             }
         }
     }
-    if(temp>5){
+
+    if(temp>4){
         for(let i=0; i<temp;i++){
-            if(temp>5){
+            if(temp>4){
                 temp-=coins[1];
-                nickelCounter++
+                nickelCounter++;
             }
         }
     }
-    if(temp>=0){
-        for(let i=0; i<temp+1;i++){
-            if(temp>=0){
+
+    if(temp>0 ){
+        for(let i=0; i<=temp+1;i++){
+            if(temp>0){
                 temp-=coins[0];
-                penniesCounter++
+                penniesCounter++;
             }
         }
     }
-    return {quartersCounter,dimeCounter,nickelCounter,penniesCounter}
+
+    if (temp==1){
+        temp-=coins[0];
+        penniesCounter++;
+    }
+
+    if (temp==0){
+        return {quartersCounter,dimeCounter,nickelCounter,penniesCounter};
+    } else{
+        return `well, something is not working properly`;
+    }
 }
 
-console.log(task6(92,[1,5,10,25]))
+console.log(task6(24,[1,5,10,25]))
 
 
 
