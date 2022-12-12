@@ -256,6 +256,7 @@ console.log(task6(24,[1,5,10,25]))
 // [
 //   { name: "John", avgNote: 4 }
 // ]
+
 const inputTask7={
     name: "John", 
     notes: [3, 5, 4]
@@ -277,7 +278,7 @@ function task7(inputTask7){
     return {name, avgNote }
 
 }
-//console.log(task7(inputTask7))
+console.log(task7(inputTask7))
 
 
 // 8. Given an object with students and the grades that they made on the 
@@ -315,5 +316,5 @@ function task8(inputTask8){
 
     return result +' has the higher average mark'
 }
-//console.log(task8([{  name: 'John', grades: [100, 90, 80]}, {name: 'Bob', 
-//    grades: [100, 70, 80]}]))
+console.log(task8([{  name: 'John', grades: [100, 90, 80]}, {name: 'Bob', 
+   grades: [100, 70, 80]}]))
