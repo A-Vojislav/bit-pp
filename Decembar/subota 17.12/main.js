@@ -121,6 +121,7 @@ console.log(task4([1, 4, -2, 11, 8, 1, -2, 3]))
         return outputB
     }
 
-    //jos pod c
+
+    //jos pod c valjda
 console.log(task5A([2, 3, 8, -2, 11, 4],6))
 console.log(task5B(['JavaScript', 'Programming', 'fun', 'product']))
