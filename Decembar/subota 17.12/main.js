@@ -103,6 +103,7 @@ console.log(task4([1, 4, -2, 11, 8, 1, -2, 3]))
 
 
     function task5A(inputA,searchingFor){
+
         let outputA=[];
         for(let i=0;i<inputA.length;i++){
             if(inputA[i]<searchingFor){
@@ -111,6 +112,7 @@ console.log(task4([1, 4, -2, 11, 8, 1, -2, 3]))
         }
         return outputA
     }
+
     function task5B(inputB){
         let outputB=[];
         for ( let i=0;i<inputB.length;i++){
@@ -123,5 +125,31 @@ console.log(task4([1, 4, -2, 11, 8, 1, -2, 3]))
 
 
     //jos pod c valjda
+    function task5C(input){
+        let output= task5B(input).shift()
+
+        return output
+    }
 console.log(task5A([2, 3, 8, -2, 11, 4],6))
 console.log(task5B(['JavaScript', 'Programming', 'fun', 'product']))
+console.log(task5C(['JavaScript', 'Programming', 'fun', 'product']))
+
+
+
+// 6.
+// a. Write a list (array) of products you usually buy in the supermarket. Write a price
+// and name for each product. For example,
+// [
+
+// {name: ‘apples’, price: 100},
+// {name: ‘milk’, price: 80},
+// {name:’bananas’, price: 150}
+// ]
+
+// b. Write a function that calculates the total price of your shopping list.
+// c. Write a function that calculates the average product price of your shopping list.
+// Print this value with the precision of three decimals.
+// d. Write a function that prints out the name of the most expensive product on your
+// shopping list. Write the name in uppercase.
+
+
