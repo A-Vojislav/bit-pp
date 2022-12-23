@@ -21,3 +21,9 @@ function task3(){
     document.getElementById("textChange").innerHTML = "i want this to be writen!";
 }
 task3()
+
+//taskInnerHtml()
+
+function taskInnerHtml(){
+    document.getElementById("myDropdown").classList.toggle("show");
+}
