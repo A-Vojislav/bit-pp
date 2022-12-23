@@ -140,7 +140,6 @@ console.log(task5C(['JavaScript', 'Programming', 'fun', 'product']))
 // a. Write a list (array) of products you usually buy in the supermarket. Write a price
 // and name for each product. For example,
 // [
-
 // {name: ‘apples’, price: 100},
 // {name: ‘milk’, price: 80},
 // {name:’bananas’, price: 150}
@@ -151,5 +150,24 @@ console.log(task5C(['JavaScript', 'Programming', 'fun', 'product']))
 // Print this value with the precision of three decimals.
 // d. Write a function that prints out the name of the most expensive product on your
 // shopping list. Write the name in uppercase.
+
+
+let inputTask6=[
+{name: 'milk', price: 100},
+{name: 'cigaretes', price: 330},
+{name:'bananas', price: 150},
+{name: 'bread', price:60}
+]
+const task6BResult = inputTask6.reduce((total, inputTask6 )=>{
+    return total + inputTask6.price
+},0)
+
+console.log(`task 6: ${task6BResult}`);
+
+const task6CResult= inputTask6.reduce((total, item)=>{
+    total +=inputTask6.price
+    return total/inputTask6
+},0)
+
 
 
