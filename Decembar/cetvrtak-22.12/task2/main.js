@@ -22,8 +22,32 @@ function task3(){
 }
 task3()
 
-//taskInnerHtml()
 
-function taskInnerHtml(){
-    document.getElementById("myDropdown").classList.toggle("show");
+function addRow() {
+    const div = document.createElement('div');
+  
+    div.className = 'row';
+  
+    div.innerHTML = `
+    <select name="Dropdown" id="drop">
+    <option value="Option1"><a href="">Link 1</a></option>
+    <option value="Option2"><a href="">Link 2</a></option>
+    </select>
+    `;
+  
+    document.getElementById('section').appendChild(div);
+  }
+
+  addRow()
+
+
+  function Validate() {
+    var name = document.getElementsByClassName("name");
+    if (name[0].value==''){
+        name[0].style.border="1px solid red"
+    } else{
+        name[0].style.border=""
+    }
+    name[0].focus();
 }
+  
