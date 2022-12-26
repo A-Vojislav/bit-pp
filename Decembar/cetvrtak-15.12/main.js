@@ -123,3 +123,7 @@ let date= timeNow.getFullYear()+'-'+(timeNow.getMonth()+1)+'-'+timeNow.getDate()
 console.log(new Date)
 console.log(time)
 console.log(date)
+
+
+// Samo da pitam, jesi dobio epilepsiju kada si pokrenuo sve ovo? :D Taj deo vam nisam rekao a mozda ste pretpostavili, ovo se izvrsava sve odjednom i krece ludilo.
+// Nemam da sta dodam ili oduzmem, samo cepaj.
