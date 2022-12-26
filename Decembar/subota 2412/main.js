@@ -27,6 +27,8 @@ function task3(input){
 }
 
 console.log(task3('Republic Of Serbia'))
+// Ovaj popravi. Treba da imas resortiranu svaku rec pojedinacno, ali tako da redosled reci ostane isti. 
+// Tvoj rezultat je ORSabbceefiilpru, a treba da budu 3 reci ;) Veliko slovo da ostane veliko, a dalje sortiras po necemu.
 
 // 4. Write a function to split a string and convert it into an array of words.
 // &quot;John Snow&quot; -&gt; [ &#39;John&#39;, &#39;Snow&#39; ]
