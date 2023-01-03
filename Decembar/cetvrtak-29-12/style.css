@@ -55,7 +55,7 @@ button{
 }
 
 .soccerPlayer{
-    width: 100%;
+    width: 594px;
     height: 400px;
     margin: 0px;
     padding: 0px;
@@ -63,9 +63,15 @@ button{
     background-repeat:no-repeat;
 }
 .soccerPlayer:hover{
-    cursor: url('/Assets_Football/Player.png');
+    cursor: url(/Decembar/cetvrtak-29-12/Assets_Football/PlayerCursor.png),auto;
 }
-
+.playerImg{
+    width: 594px;
+    height: 400px;
+}
+.playerImg:hover{
+    display: none;
+}
 .player{
     float: left;
     width: 80px;

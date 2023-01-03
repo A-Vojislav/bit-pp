@@ -50,6 +50,11 @@ addMessageChatRoomButton.addEventListener('click', addMessageHandler)
 // soccer player
 
 
-const player=document.getElementById('player');
+const playerPosition=document.getElementById('soccerPlayer');
+
+function playerPositionHandler (){
+
+
+}
 
 
