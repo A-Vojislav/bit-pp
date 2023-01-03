@@ -43,6 +43,31 @@ button{
 
 }
 .input{
+    display: flex;
+    justify-content:flex-end;
     width: 100%;
 
 }
+.output{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
+
+.soccerPlayer{
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(/Decembar/cetvrtak-29-12/Assets_Football/Field.png);
+    background-repeat:no-repeat;
+}
+.soccerPlayer:hover{
+    cursor: url('/Assets_Football/Player.png');
+}
+
+.player{
+    float: left;
+    width: 80px;
+}
+

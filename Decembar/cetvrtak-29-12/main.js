@@ -46,3 +46,10 @@ function addMessageHandler (){
 }
 
 addMessageChatRoomButton.addEventListener('click', addMessageHandler)
+
+// soccer player
+
+
+const player=document.getElementById('player');
+
+
