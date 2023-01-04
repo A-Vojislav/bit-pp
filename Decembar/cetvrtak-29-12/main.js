@@ -53,8 +53,14 @@ addMessageChatRoomButton.addEventListener('click', addMessageHandler)
 const playerPosition=document.getElementById('soccerPlayer');
 
 function playerPositionHandler (){
-
-
+    var x = event.clientX;
+    var y = event.clientY;
+    var playerInsert = document.getElementById("player");
+    playerInsert.style.display = '';
+    playerInsert.style.position = 'absolute';
+    playerInsert.style.left = x + 'px';
+    playerInsert.style.top = y + 'px';
 }
 
 
+playerPosition.addEventListener('click', playerPositionHandler)

@@ -66,6 +66,7 @@ button{
     cursor: url(/Decembar/cetvrtak-29-12/Assets_Football/PlayerCursor.png),auto;
 }
 .playerImg{
+    position: absolute;
     width: 594px;
     height: 400px;
 }
@@ -73,7 +74,6 @@ button{
     display: none;
 }
 .player{
-    float: left;
     width: 80px;
 }
 
