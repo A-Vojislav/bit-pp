@@ -52,15 +52,18 @@ addMessageChatRoomButton.addEventListener('click', addMessageHandler)
 
 const playerPosition=document.getElementById('soccerPlayer');
 
-function playerPositionHandler (){
-    var x = event.clientX;
-    var y = event.clientY;
-    var playerInsert = document.getElementById("player");
+function playerPositionHandler (event){
+    let x = event.clientX;
+    let y = event.clientY;
+    let playerInsert = document.getElementById("player");
     playerInsert.style.display = '';
     playerInsert.style.position = 'absolute';
-    playerInsert.style.left = x + 'px';
-    playerInsert.style.top = y + 'px';
+    playerInsert.style.left = x;
+    playerInsert.style.top = y;
 }
 
 
 playerPosition.addEventListener('click', playerPositionHandler)
+
+// super Mario
+
