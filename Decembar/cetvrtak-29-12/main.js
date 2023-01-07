@@ -1,4 +1,4 @@
-//task1
+// //task1
 
 let colors = ["Orangered","Blue","Yellow","Green","Orange", "Cyan","DodgerBlue", "Violet"];
 let index = 0;
@@ -46,24 +46,3 @@ function addMessageHandler (){
 }
 
 addMessageChatRoomButton.addEventListener('click', addMessageHandler)
-
-// soccer player
-
-
-const playerPosition=document.getElementById('soccerPlayer');
-
-function playerPositionHandler (event){
-    let x = event.clientX;
-    let y = event.clientY;
-    let playerInsert = document.getElementById("player");
-    playerInsert.style.display = '';
-    playerInsert.style.position = 'absolute';
-    playerInsert.style.left = x;
-    playerInsert.style.top = y;
-}
-
-
-playerPosition.addEventListener('click', playerPositionHandler)
-
-// super Mario
-
