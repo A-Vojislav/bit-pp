@@ -66,14 +66,19 @@ button{
     cursor: url(/Decembar/cetvrtak-29-12/Assets_Football/PlayerCursor.png),auto;
 }
 .playerImg{
-    position: absolute;
     width: 594px;
     height: 400px;
+
 }
 .playerImg:hover{
     display: none;
 }
+.playerClicked{
+    width: 80px;
+    display: none;
+}
 .player{
+
     width: 80px;
 }
 
