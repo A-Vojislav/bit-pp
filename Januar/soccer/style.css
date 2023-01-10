@@ -1,0 +1,19 @@
+*{
+    margin-left: 15px;
+}
+
+.field{
+    width: 594px;
+    height: 400px;
+    background-image: url(../soccer/Assets_Football/Field.png);
+    background-repeat: no-repeat;
+}
+
+#player{
+    position: absolute;
+    width: 80px;
+}
+
+button{
+    font-size: 2em;
+}
